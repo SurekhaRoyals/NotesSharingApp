@@ -18,7 +18,7 @@ import com.nsa.base.NoteDtos.NoteResponse;
 public interface NoteShareRepository extends JpaRepository<NoteShare,Long>{
 
 	
-	Optional<NoteShare> findByNote_IdAndSharedWith_Id(Long noteId, Long userId);
+	Optional<NoteShare> findByNoteIdAndSharedWithId(Long noteId, Long userId);
 
 	  @Modifying
 	  @Query("delete from NoteShare s where s.note.id = :noteId and s.sharedWith.id = :userId")

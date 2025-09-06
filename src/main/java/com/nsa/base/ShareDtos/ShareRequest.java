@@ -14,8 +14,11 @@ public class ShareRequest {
 	
 	@NotBlank
 	private String targetUsername;
+	
 	  @NotNull 
 	  private SharePermission permission;
+	  
+	  
 	  
 	public String getTargetUsername() {
 		return targetUsername;
